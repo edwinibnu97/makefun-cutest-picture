@@ -121,15 +121,15 @@ def draw_smile(img):
     """Little 'w' smile under the nose: short stem + two curves."""
     for y in range(340, 349):
         draw_thick_point(img, 255, y, MOUTH, 2)
-    # left curve: parabola opening up
-    for t in range(0, 13):
+    # left curve: parabola opening up (a touch deeper so it reads at 300px)
+    for t in range(0, 15):
         x = 255 - t
-        y = 349 + (t * t) // 14
+        y = 349 + (t * t) // 11
         draw_thick_point(img, x, y, MOUTH, 2)
     # right curve
-    for t in range(0, 13):
+    for t in range(0, 15):
         x = 256 + t
-        y = 349 + (t * t) // 14
+        y = 349 + (t * t) // 11
         draw_thick_point(img, x, y, MOUTH, 2)
 
 
